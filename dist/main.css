@@ -2,3 +2,41 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 
+#welcome {
+  background-color: rgb(146, 146, 245);
+  background-image: url("../images/17493.jpg");
+  height: 100%;
+}
+
+#welcome-text-box{
+  padding-top: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome img{
+  min-height: 100%;
+  min-width: 1024px;
+}
+
+#welcome ul{
+  color: rgb(187, 187, 10);
+}
+
+.welcome-1{
+  font-size: 50;
+
+  
+}
+
+.welcome-2{
+  font-size: 40;
+  
+  padding: 30;
+}
+
+.welcome-3{
+  font-size: 30;
+}

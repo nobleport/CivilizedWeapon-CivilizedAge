@@ -15,7 +15,6 @@
   "name": "civilizedweapon-civilizedage",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "browserslist": [
     "defaults"
   ],
