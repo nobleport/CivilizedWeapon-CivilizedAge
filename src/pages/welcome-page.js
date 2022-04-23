@@ -1,14 +1,18 @@
-const Workbench = require("./workbench-page");
+// const Workbench = require("./workbench-page");
+import Workbench from "./workbench-page"
 
-class Welcome {
-    constructor(element){
-        this.element = element;
+export default class Welcome {
+    constructor(){
         this.welcomeStructure();
     }
     welcomeStructure(){
+        let welcomePageFigure = document.createElement("figure")
+        welcomePageFigure.id = 'welcome'
+        document.body.appendChild(welcomePageFigure)
         let ul = document.createElement("ul")
         ul.id = "welcome-text-box"
-        this.element.appendChild(ul);
+        console.log(welcomePageFigure)
+        welcomePageFigure.appendChild(ul);
         let li1 = document.createElement("li");
             li1.className = "welcome-1";
             ul.appendChild(li1);
@@ -39,12 +43,13 @@ class Welcome {
     // addEventListener("click",)
     switchScreens(e) {
         let welcomeBox = document.getElementById('welcome');
-        welcomeBox.disabled = true;
-        let element = document.getElementById('workbench')
-        new Workbench(element);
+        document.body.removeChild(welcomeBox)
+        new Workbench();
+        //this is where we are switching pages
     }
     
 }
 
-module.exports = Welcome;
+// module.exports = Welcome;
+
 
