@@ -22,9 +22,8 @@ export default class Welcome {
         let li3 = document.createElement("li");
             li3.className = "welcome-3";
             ul.appendChild(li3);
-        let li4 = document.createElement("a");
+        let li4 = document.createElement("button");
             li4.className = "launch-button";
-            li4.href = "#";
             //this should link us to generating the workbench page//
             ul.appendChild(li4)
         li4.addEventListener("click", this.switchScreens.bind(this));
