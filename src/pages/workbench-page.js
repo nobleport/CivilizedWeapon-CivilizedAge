@@ -1,10 +1,13 @@
 // const Welcome = require("./welcome-page")
 import Welcome from "./welcome-page"
+import ExtraInfo from "./extra-info";
 
 export default class Workbench {
 
     constructor () {
         this.workbenchStructure();
+        new ExtraInfo();
+        //dont wanna leave this Extra info here, just for testing. Eventually It should be on event handler
     }
 
     workbenchStructure(){
@@ -26,43 +29,71 @@ export default class Workbench {
         new Welcome();
     }
 
-    // addBackgroundImg(workbenchPageFigure){
-    //     let bgImg = document.createElement("div");
-    //     bgImg.className = "workbenchBackground";
-    //     workbenchPageFigure.appendChild(bgImg);
-    // }
-
     constructSidebar(workbenchPageFigure){
         let sidebar = document.createElement("div");
         sidebar.className = "workbench-sidebar"
         workbenchPageFigure.appendChild(sidebar);
         let ul = document.createElement("ul");
         sidebar.appendChild(ul)
-        this.addCrystalOptions(ul);
-        this.addSleeveOptions(ul);
-        this.addEmitterOptions(ul);
+        this.addCrystalOption(ul);
+        this.addSleeveOption(ul);
+        this.addEmitterOption(ul);
     }
 
-    addCrystalOptions(ul){
+    addCrystalOption(ul){
         let button = document.createElement("button");
         button.className = "crystal";
         button.innerHTML = "Crystals"
-        ul.appendChild(button);
+        let li = document.createElement("li");
+        li.className = `dropdown-${button.className}`;
+        ul.appendChild(li);
+        li.appendChild(button);
+        this.addDropdownOptions(li, button, "Yellow", "Green", "Red", "Blue", "Purple", "White", "Black");
 
     }
 
-    addSleeveOptions(ul){
+    addSleeveOption(ul){
         let button = document.createElement("button");
         button.className = "sleeve";
-        button.innerHTML = "Sleeves"
-        ul.appendChild(button);
+        button.innerHTML = "Sleeves";
+        let li = document.createElement("li");
+        li.className = `dropdown-${button.className}`;
+        ul.appendChild(li);
+        li.appendChild(button);
+        this.addDropdownOptions(li, button );
+        // add sleeve options as an argument here
     }
 
-    addEmitterOptions(ul){
+    addEmitterOption(ul){
         let button = document.createElement("button");
         button.className = "emitter";
-        button.innerHTML = "Emitters"
-        ul.appendChild(button);
+        button.innerHTML = "Emitters";
+        let li = document.createElement("li");
+        li.className = `dropdown-${button.className}`;
+        ul.appendChild(li);
+        li.appendChild(button);
+        this.addDropdownOptions(li, button);
+        // add emitter options as an argument here
+    }
+
+    addDropdownOptions(li, button, ...options){
+        let div = document.createElement("div");
+        div.className = `dropdown-content-${button.className}`
+        div.addEventListener("click", this.handleContentClick.bind(this));
+        li.appendChild(div);
+        for (let i = 0; i < options.length; i++){
+            let p = document.createElement("p");
+            p.className = options[i];
+            //not sure if I want the list options to have a class name or Id at all?
+            p.innerHTML = options[i];
+            div.appendChild(p);
+        }
+    }
+
+    handleContentClick(e){
+        // dynamic code to pull up information screen
+        console.log(e)
+
     }
 
     
