@@ -58,7 +58,128 @@ ted kyber crystal. In building her own lightsaber, she purified the kyber crysta
         image: ""
     },
 
-    source:"https://www.bossksbounty.com/films/every-lightsaber-color-in-star-wars#:~:text=Every%20Lightsaber%20Color%20in%20Star,and%20red%20for%20the%20Sith."
+    source:"https://www.bossksbounty.com/films/every-lightsaber-color-in-star-wars#:~:text=Every%20Lightsaber%20Color%20in%20Star,and%20red%20for%20the%20Sith.",
+
+    //sleeve options
+    "EchaniFoil":{
+        title: "Echani Foil",
+        description: "Excess energy from the generator in this hilt is conducted\
+ directly through the blades. Also possessing a rare Iridorian we\
+ ave, this weapon is a deadly Echani masterpiece.",
+        image: "../images/lightsaber-pieces/EchaniFoilC.png"
+    },
+    
+    ShotoHilt: {
+        title: "Shoto Hilt",
+        description: "This advanced sleeve is a miracle of miniaturization technology.\
+ Not only does it deliver increased functionality over a normal vibrosword, it also has cap\
+ acitors which discharge upon contact with a target.",
+        image: "../images/lightsaber-pieces/ShotoHiltC.png"
+    },
+
+    VibroSleeve: {
+        title: "Vibro Sleeve",
+        description: "This sleeve possesses a high frequency vibrtation technology that offers it protection\
+against even the most dangerous weapons. It has been known to deflect strikes from other lightsabers. Energy captured from\
+strikes from other energy weapons is redirected to the emitter, creating a stronger blade.",
+        image: "../images/lightsaber-pieces/VibroSleeveC.png"
+    },
+
+    KrathBlood: {
+        title: "Krath Blood",
+        description: "Twisted by the dark side, this ancient sleeve has come to feed off the weilder to focus more energy into the blade.\
+ It is meant for assassination, meaning it's defensive properties lack, but never underestimate the power of weapons infused with the force itself.",
+        image: "../images/lightsaber-pieces/KrathBloodSleeveC.png"
+    },
+
+    MassassiBrand: {
+        title: "Massassi Brand",
+        description: "During the reign of Naga Sadow the Massassi were transformed into foot soldiers for\
+ the Sith. This was their traditional weapon design, it excells at piercing damage and has even been known to melt through\
+ Mandalorian beskar given enough time.",
+        image: "../images/lightsaber-pieces/MassassiBrandC.png"
+    },
+
+    CortosisWeave: {
+        title: "Cortosis Weave",
+        description: "Sanasiki used this weapon design to kill Nelinik, a Zabrak who assassinated the Echani\
+High Protector with battle droids. Cortosis protects the blade against lightsaber sparring dam\
+age while energy cells disrupt droid opponents. Use this if you plan on fighting a lot of droids.",
+        image: "../images/lightsaber-pieces/cortosisSleeveC.png"
+    },
+
+    JediTremor: {
+        title: "Jedi Tremor",
+        description: "Traced to the Bladeborn, a Jedi offshoot dedicated to sword mastery,\
+ these cortosis-laced weapons were given to 'masterblades' who survived no less than ten li\
+ ghtsaber-wielding warriors in combat.",
+        image: "../images/lightsaber-pieces/JediTremorC.png"
+    },
+
+    KenobiSleeve: {
+        title: "Kenobi Sleeve",
+        description: "This is the sleeve design used by the legendary Obi Wan Kenobi. ",
+        image: "../images/lightsaber-pieces/KenobiSleeveC.png"
+    },
+
+    // emitter options
+
+    VibrationCell: {
+        title: "Vibration Cell",
+        description: "Excellent in conjunction with other vibro weapons/modifications since \
+it amplifies vibration benefits, but focuses it into the blade. Offers a high slashing power due to the vibrating technology",
+        image: "../images/lightsaber-pieces/cortosis-topC.png"
+    },
+
+    BeamSplitter: {
+        title: "Beam Splitter",
+        description: "This emitter widens the blade, making it excellent for deflecting blaster bolts. It makes for a \
+less elegant blade, but is prime for defending against multiple weaker enemies. Be cautious when taking on stronger opponents.",
+        image: "../images/lightsaber-pieces/EchaniFoilEmittter.png"
+    },
+
+    ImprovedEnergyCell: {
+        title: "Improved Energy Cell",
+        description: "This emitter includes an energy cell that can be used as an external power-source, and is \
+quite effective due to it's energy efficiency. It is an extremely dependable emitter and will rarely malfunction.",
+        image: "../images/lightsaber-pieces/JediTremorEmitterC.png"
+    },
+
+    DurasteelBondingAlloy: {
+        title: "Durasteel Bonding Alloy",
+        description: "This emitter generates a wide, powerful blade that softens blows from other lightsabers and vibroswords. This makes it\
+perfect for a defensive fighting style, waiting for the opponent to become exhausted, opening themselves up to counter-attacks.",
+        image: "../images/lightsaber-pieces/KenobiSleeveEmitterC.png"
+    },
+
+    HyperFocusingEmitter: {
+        title: "Hyper Focusing Emitter",
+        description: "Highly focused blades are perfect for dueling a single, lightsaber weilding opponent, but rely on an offensive fighting style. \
+This emitter focuses the blade and causes strikes against other lightsabers to deflect much more powerfully.",
+        image: "../images/lightsaber-pieces/KrathBloodEmitterC.png"
+    },
+
+    MassassiBrandEmitter: {
+        title: "Massassi Brand Emitter",
+        description: "Massassi designed parts are frequently used by sith assassins or Jedi sentinels who use their weapons to \
+quickly dispel an enemy. Upon ignition, this emitter causes the blade to extend almost instantly. Be prepared to kill, and then \
+blend into the background.",
+        image: "../images/lightsaber-pieces/MassassiBrandEmitterC.png"
+    },
+
+    ShotoEmitter: {
+        title: "Shoto Emitter",
+        description: "The modified Sith Shoto emitter was designed for quick and silent killing of \
+unexpected targets. It was damaging against both organic beings and droids, and was usually fatal to both.",
+        image: "../images/lightsaber-pieces/ShotoEmitterC.png"
+    },
+
+    VibroEmitter: {
+        title: "Vibro Blade Emitter",
+        description: "The modified Sith Shoto emitter was designed for quick and silent killing of \
+        unexpected targets. It was damaging against both organic beings and droids, and was usually fatal to both.",
+        image: "../images/lightsaber-pieces/VibroSleeveEmitterC.png"
+    }
 };
 
 module.exports = dataBase;

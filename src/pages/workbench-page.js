@@ -65,7 +65,7 @@ export default class Workbench {
         button.classList.add("sidebar-buttons");
         ul.appendChild(li);
         li.appendChild(button);
-        this.addDropdownOptions(li, button );
+        this.addDropdownOptions(li, button, "Echani Foil", "Shoto Hilt", "Vibro Sleeve", "Krath Blood", "Massassi Brand", "Cortosis Weave", "Jedi Tremor", "Kenobi Sleeve");
         // add sleeve options as an argument here
     }
 
@@ -78,7 +78,7 @@ export default class Workbench {
         button.classList.add("sidebar-buttons");
         ul.appendChild(li);
         li.appendChild(button);
-        this.addDropdownOptions(li, button);
+        this.addDropdownOptions(li, button, "Vibration Cell", "Beam Splitter", "Improved Energy Cell", "Durasteel Bonding Alloy", "Hyper Focusing Emitter", "Massassi Brand Emitter", "Shoto Emitter", "Vibro Emitter");
         // add emitter options as an argument here
     }
 
@@ -105,12 +105,19 @@ export default class Workbench {
         }
         new ExtraInfo();
         let title = document.querySelector("#options-container > h3:first-of-type")
-        let colorClicked = (e.path[0]).className;
+        let optionClicked = (e.path[0]).className;
+        let optionsArr = optionClicked.split(" ");
+        let key = ""
+        optionsArr.forEach (function(word){
+            key += word;
+        })
+        console.log(key) // Echani Foil
         let description = document.querySelector("#options-container > p:first-of-type")
-        // let img = document.querySelector("#options-container > img:first-of-type")
-        title.innerHTML = dataBase[colorClicked].title;
-        description.innerHTML = dataBase[colorClicked].description;
-        // img.src = dataBase[colorClicked].img
+        let img = document.querySelector("#options-container > img:first-of-type")
+        console.log(title) //h3 element, which is what we want
+        title.innerHTML = dataBase[key].title;
+        description.innerHTML = dataBase[key].description;
+        img.src = dataBase[key].image
 
     }
 

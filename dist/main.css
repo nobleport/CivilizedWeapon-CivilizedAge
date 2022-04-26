@@ -42,6 +42,7 @@ margin-right: 100px;
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/workbench-style.css ***!
   \**************************************************************************************************************/
 #workbench {
+  position: relative;
     background-image: url("../images/Screen Shot 2022-04-24 at 7.05.52 PM.png");
     /* background-position: top center; */
     background-size: cover;
@@ -139,11 +140,85 @@ margin-right: 100px;
     display: flex;
 }
 
-#options-container {
+.dropdown-sleeve{
+  width: 70px;
   position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content-sleeve {
+display: none;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+position: absolute;
+left: 140%;
+top: 0%;
+font-size: 20;
+background-color: #fafeffa2;
+border-radius: 4px;
+width: 143px;
+box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+z-index: 1;
+cursor: pointer;
+color: #242424;
+font-family: arial;
+padding: 12px;
+}
+
+.dropdown-content-sleeve > p:hover {
+color: olive;
+  
+}
+
+
+.dropdown-sleeve:hover .dropdown-content-sleeve{
+  display: flex;
+}
+
+.dropdown-emitter{
+  width: 70px;
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content-emitter {
+display: none;
+flex-direction: column;
+justify-content: space-around;
+position: absolute;
+left: 140%;
+top: 0%;
+font-size: 20;
+background-color: #fafeffa2;
+border-radius: 4px;
+width: 213px;
+box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+z-index: 1;
+cursor: pointer;
+color: #242424;
+font-family: arial;
+padding: 12px;
+}
+
+.dropdown-content-emitter > p:hover {
+color: olive;
+  
+}
+
+
+.dropdown-emitter:hover .dropdown-content-emitter{
+  display: flex;
+}
+
+#options-container {
+  position: absolute;
   background-image: url("../images/computer-terminal.jpg");
   height: 500px;
   width: 600px;
+  top: 35%;
   background-position-x: center;
   background-position-y: center;
   opacity: .85;
@@ -154,7 +229,7 @@ margin-right: 100px;
 
 #options-container  button{
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -182,6 +257,12 @@ margin-right: 100px;
   line-height: 1.6;
 
 
+}
+
+#options-container > img:first-of-type {
+  width: 28px;
+  margin-left: 283px;
+  padding-top: 40px;
 }
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/options-style.css ***!
