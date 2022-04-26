@@ -62,6 +62,7 @@ export default class Workbench {
         button.innerHTML = "Sleeves";
         let li = document.createElement("li");
         li.className = `dropdown-${button.className}`;
+        button.classList.add("sidebar-buttons");
         ul.appendChild(li);
         li.appendChild(button);
         this.addDropdownOptions(li, button );
@@ -74,6 +75,7 @@ export default class Workbench {
         button.innerHTML = "Emitters";
         let li = document.createElement("li");
         li.className = `dropdown-${button.className}`;
+        button.classList.add("sidebar-buttons");
         ul.appendChild(li);
         li.appendChild(button);
         this.addDropdownOptions(li, button);
