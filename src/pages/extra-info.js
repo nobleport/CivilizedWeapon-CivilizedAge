@@ -1,6 +1,10 @@
+
+
 export default class ExtraInfo{
     constructor(){
         this.extraInfoDiv();
+        //how we can access our database
+        
     }
 
     extraInfoDiv(){
@@ -16,11 +20,20 @@ export default class ExtraInfo{
         let description = document.createElement("p");
         let exampleImg = document.createElement("img");
         let selectButton = document.createElement("button");
+        selectButton.addEventListener("click", this.handleSelect.bind(this));
+        selectButton.innerHTML = "Select"
         let arr = [optionsHeader, description, exampleImg, selectButton];
         arr.forEach(function(ele){
             div.appendChild(ele);
         })
-        console.log(document.querySelector("#options-container > p:first-of-type"))
+        // console.log(document.querySelector("#options-container > p:first-of-type"))
         //this is how to select the first of each type in the div-container
     }
+    handleSelect(e){
+        let figure = document.getElementById("workbench");
+        let div = document.getElementById("options-container");
+        figure.removeChild(div)
+    }
+
+    
 }

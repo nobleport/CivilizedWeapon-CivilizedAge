@@ -1,4 +1,6 @@
-// const Welcome = require("./welcome-page")
+import dataBase from "./info-db";
+
+
 import Welcome from "./welcome-page"
 import ExtraInfo from "./extra-info";
 
@@ -6,7 +8,7 @@ export default class Workbench {
 
     constructor () {
         this.workbenchStructure();
-        new ExtraInfo();
+        
         //dont wanna leave this Extra info here, just for testing. Eventually It should be on event handler
     }
 
@@ -43,9 +45,11 @@ export default class Workbench {
     addCrystalOption(ul){
         let button = document.createElement("button");
         button.className = "crystal";
+        //add this class to the 2 others later
         button.innerHTML = "Crystals"
         let li = document.createElement("li");
         li.className = `dropdown-${button.className}`;
+        button.classList.add("sidebar-buttons");
         ul.appendChild(li);
         li.appendChild(button);
         this.addDropdownOptions(li, button, "Yellow", "Green", "Red", "Blue", "Purple", "White", "Black");
@@ -79,6 +83,7 @@ export default class Workbench {
     addDropdownOptions(li, button, ...options){
         let div = document.createElement("div");
         div.className = `dropdown-content-${button.className}`
+        div.classList.remove("sidebar-buttons");
         div.addEventListener("click", this.handleContentClick.bind(this));
         li.appendChild(div);
         for (let i = 0; i < options.length; i++){
@@ -92,7 +97,18 @@ export default class Workbench {
 
     handleContentClick(e){
         // dynamic code to pull up information screen
-        console.log(e)
+        if (document.getElementById("options-container")){
+            let figure = document.getElementById("workbench")
+            figure.removeChild(document.getElementById("options-container"))
+        }
+        new ExtraInfo();
+        let title = document.querySelector("#options-container > h3:first-of-type")
+        let colorClicked = (e.path[0]).className;
+        let description = document.querySelector("#options-container > p:first-of-type")
+        // let img = document.querySelector("#options-container > img:first-of-type")
+        title.innerHTML = dataBase[colorClicked].title;
+        description.innerHTML = dataBase[colorClicked].description;
+        // img.src = dataBase[colorClicked].img
 
     }
 
