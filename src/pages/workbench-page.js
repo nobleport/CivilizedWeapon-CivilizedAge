@@ -1,14 +1,13 @@
-import dataBase from "./info-db";
-
-
+import dataBase from "./info-db"; 
 import Welcome from "./welcome-page"
 import ExtraInfo from "./extra-info";
+import Lightsaber from "./lightsaber-builder";
 
 export default class Workbench {
 
     constructor () {
         this.workbenchStructure();
-        
+        new Lightsaber();
         //dont wanna leave this Extra info here, just for testing. Eventually It should be on event handler
     }
 

@@ -264,10 +264,44 @@ color: olive;
   margin-left: 283px;
   padding-top: 40px;
 }
+
+.workbench-sidebar {
+  width: 314px;
+}
+
+/* Lightsaber styling */
+.blade {
+  position: absolute;
+  left: 73%;
+  height: 300px;
+  width: 14px;
+  background-color: rgb(210, 208, 234);
+  border-radius: 26px 0px 0px 0px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0 -20px 80px 40px rgba(0, 45, 200, .8);
+  background: linear-gradient(blue);
+  animation: flicker 5s linear infinite;
+}
+
+@keyframes flicker {
+  0%{box-shadow: 0 -20px 80px 30px rgba(0, 45, 200, .8);}
+  25%{box-shadow: 0 -20px 80px 40px rgba(0, 45, 200, .8);}
+  50%{box-shadow: 0 -20px 80px 50px rgba(0, 45, 200, .8);}
+  75%{box-shadow: 0 -20px 80px 40px rgba(0, 45, 200, .8);}
+  100%{box-shadow: 0 -20px 80px 30px rgba(0, 45, 200, .8);}
+}
 /*!************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/options-style.css ***!
   \************************************************************************************************************/
 
+/*!*********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/lightsaber.css ***!
+  \*********************************************************************************************************/
+
+
+/* .blade {
+
+} */
 /*!********************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/styles/index.scss ***!
   \********************************************************************************************************************************************/
