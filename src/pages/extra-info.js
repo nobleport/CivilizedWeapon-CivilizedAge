@@ -1,4 +1,4 @@
-
+import dataBase from "./info-db"; 
 
 export default class ExtraInfo{
     constructor(){
@@ -22,6 +22,10 @@ export default class ExtraInfo{
         let selectButton = document.createElement("button");
         selectButton.addEventListener("click", this.handleSelect.bind(this));
         selectButton.innerHTML = "Select"
+        // let deselectButton = document.createElement("button");
+        // deselectButton.addEventListener("click", this.handleDeSelect.bind(this));
+        // deselectButton.innerHTML = "Deselect"
+        // deselectButton.className = "deselect-button"
         let arr = [optionsHeader, description, exampleImg, selectButton];
         arr.forEach(function(ele){
             div.appendChild(ele);
@@ -29,10 +33,40 @@ export default class ExtraInfo{
         // console.log(document.querySelector("#options-container > p:first-of-type"))
         //this is how to select the first of each type in the div-container
     }
+
+    // handleDeSelect(e){
+
+    // }
     handleSelect(e){
         let figure = document.getElementById("workbench");
         let div = document.getElementById("options-container");
-        figure.removeChild(div)
+        // console.log(e.path[1].id);
+        let containerId = e.path[1].id;
+        let headerDiv = document.querySelector(`#options-container > h3:first-of-type`);
+        let headerText = headerDiv.textContent;
+        // console.log(headerText);
+        // figure.removeChild(div)
+        let headerArr = headerText.split(" ");
+        let key = "";
+            if (headerArr.length === 1) {
+                key = headerArr[0]
+            }else{
+                headerArr.forEach (function(word){
+                    key += word;
+            })
+        }
+        console.log(key);
+        if (dataBase[key].type === "crystal"){
+            let targetDiv = document.querySelector("#lightsaber-container > div");
+            targetDiv.id = `blade-${dataBase[key].title}`
+            
+        }else if(dataBase[key].type === "emitter"){
+            let targetDiv = document.getElementById("emitter")
+            targetDiv.src = dataBase[key].image;
+        }else{
+            let targetDiv = document.getElementById("sleeve")
+            targetDiv.src = dataBase[key].image;
+        }
     }
 
     

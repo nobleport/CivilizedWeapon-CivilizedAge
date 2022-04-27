@@ -15,14 +15,25 @@ export default class Lightsaber{
 
     buildLightsaberStructure(div){
         let blade = document.createElement("div");
-        blade.className = "blade";
+        // blade.id = "blade";
         div.appendChild(blade);
         let emitter = document.createElement("img");
-        emitter.className = "emitter";
+        emitter.id = "emitter";
         let sleeve = document.createElement("img");
-        sleeve.className = "sleeve";
+        sleeve.id = "sleeve";
         div.appendChild(emitter);
         div.appendChild(sleeve);
+        let crystal = document.createElement("img");
+        crystal.id = "crystal";
+        div.appendChild(crystal);
+        div.addEventListener("click", this.igniteBlade.bind(this))
     }
 
+    igniteBlade(e){
+        let blade = document.querySelector("#lightsaber-container > div:first-of-type");
+        if (blade.style.display === "block"){
+            blade.style.display = "none";
+        }else{
+        blade.style.display = "block";}
+    }
 }

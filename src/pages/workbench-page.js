@@ -107,13 +107,17 @@ export default class Workbench {
         let optionClicked = (e.path[0]).className;
         let optionsArr = optionClicked.split(" ");
         let key = ""
-        optionsArr.forEach (function(word){
-            key += word;
-        })
+            if (optionsArr.length === 1){
+                key = optionsArr[0]
+            }else{
+            optionsArr.forEach (function(word){
+                key += word;
+            })
+        }
         console.log(key) // Echani Foil
         let description = document.querySelector("#options-container > p:first-of-type")
         let img = document.querySelector("#options-container > img:first-of-type")
-        console.log(title) //h3 element, which is what we want
+        // console.log(title) //h3 element, which is what we want
         title.innerHTML = dataBase[key].title;
         description.innerHTML = dataBase[key].description;
         img.src = dataBase[key].image
