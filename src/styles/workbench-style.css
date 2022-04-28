@@ -269,7 +269,7 @@ color: olive;
 #blade-Green {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -293,7 +293,7 @@ color: olive;
 #blade-Yellow {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -317,7 +317,7 @@ color: olive;
 #blade-Red {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -341,7 +341,7 @@ color: olive;
 #blade-Blue {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -366,7 +366,7 @@ color: olive;
 #blade-Purple {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -390,7 +390,7 @@ color: olive;
 #blade-White {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
@@ -414,25 +414,25 @@ color: olive;
 #blade-Black {
   display: none;
   position: absolute;
-  left: 72.6%;
+  left: 72.7%;
   height: 474px;
   width: 14px;
   bottom: 37%;
-  background-color: rgb(210, 208, 234);
+  background-color: rgb(20, 21, 24);;
   border-radius: 0px 26px 0px 0px;
   animation: flicker-black 3s linear infinite;
 }
 
 @keyframes flicker-black {
-  0%{box-shadow: 0 -20px 80px 40px rgba(20, 21, 24, 0.756);}
-  12.5%{box-shadow: 0 -20px 80px 45px rgba(20, 21, 24, 0.756);}
-  25%{box-shadow: 0 -20px 80px 50px rgba(20, 21, 24, 0.756);}
-  37.5%{box-shadow: 0 -20px 80px 55px rgba(20, 21, 24, 0.756);}
-  50%{box-shadow: 0 -20px 80px 60px rgba(20, 21, 24, 0.756);}
-  62.5%{box-shadow: 0 -20px 80px 55px rgba(20, 21, 24, 0.756);}
-  75%{box-shadow: 0 -20px 80px 50px rgba(20, 21, 24, 0.756);}
-  87.5%{box-shadow: 0 -20px 80px 45px rgba(20, 21, 24, 0.756);}
-  100%{box-shadow: 0 -20px 80px 40px rgba(20, 21, 24, 0.756);}
+  0%{box-shadow: 0 -20px 80px 40px rgba(210, 208, 234, 0.756)}
+  12.5%{box-shadow: 0 -20px 80px 45px rgba(210, 208, 234, 0.756)}
+  25%{box-shadow: 0 -20px 80px 50px rgba(210, 208, 234, 0.756)}
+  37.5%{box-shadow: 0 -20px 80px 55px rgba(210, 208, 234, 0.756)}
+  50%{box-shadow: 0 -20px 80px 60px rgba(210, 208, 234, 0.756)}
+  62.5%{box-shadow: 0 -20px 80px 55px rgba(210, 208, 234, 0.756)}
+  75%{box-shadow: 0 -20px 80px 50px rgba(210, 208, 234, 0.756)}
+  87.5%{box-shadow: 0 -20px 80px 45px rgba(210, 208, 234, 0.756)}
+  100%{box-shadow: 0 -20px 80px 40px rgba(210, 208, 234, 0.756)}
 }
 
 #sleeve {
