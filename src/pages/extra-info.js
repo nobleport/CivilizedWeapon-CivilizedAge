@@ -55,7 +55,6 @@ export default class ExtraInfo{
                     key += word;
             })
         }
-        console.log(key);
         if (dataBase[key].type === "crystal"){
             let targetDiv = document.querySelector("#lightsaber-container > div");
             targetDiv.id = `blade-${dataBase[key].title}`

@@ -11,7 +11,6 @@ export default class Welcome {
         document.body.appendChild(welcomePageFigure)
         let ul = document.createElement("ul")
         ul.id = "welcome-text-box"
-        console.log(welcomePageFigure)
         welcomePageFigure.appendChild(ul);
         let li1 = document.createElement("li");
             li1.className = "welcome-1";
@@ -44,7 +43,7 @@ Select a sleeve, then a crystal, then cap it off with an emitter. May the Force 
     switchScreens(e) {
         let welcomeBox = document.getElementById('welcome');
         document.body.removeChild(welcomeBox)
-        new Welcome();
+        new Workbench();
         //this is where we are switching pages
     }
     
