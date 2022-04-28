@@ -114,7 +114,7 @@ export default class Workbench {
                 key += word;
             })
         }
-        console.log(key) // Echani Foil
+        // Echani Foil
         let description = document.querySelector("#options-container > p:first-of-type")
         let img = document.querySelector("#options-container > img:first-of-type")
         // console.log(title) //h3 element, which is what we want
