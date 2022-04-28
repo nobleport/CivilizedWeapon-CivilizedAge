@@ -35,7 +35,8 @@ export default class Welcome {
         li2.innerHTML = 'These are your first steps... -Ben Kenobi'
         li3.innerHTML = 'Before you can be fully accepted into the Jedi Order, you must construct your first lightsaber prototype'
         li3.innerHTML += '. Think carefully about your design. Remember, there are consequences to every choice, and the choices '
-        li3.innerHTML += 'you make now will help determine your focus as a Jedi. May the Force be with you.'
+        li3.innerHTML += 'you make now will help determine your focus as a Jedi.\
+Select a sleeve, then a crystal, then cap it off with an emitter. May the Force be with you.'
         li4.innerHTML = "Launch"
     }
 
@@ -43,7 +44,7 @@ export default class Welcome {
     switchScreens(e) {
         let welcomeBox = document.getElementById('welcome');
         document.body.removeChild(welcomeBox)
-        new Workbench();
+        new Welcome();
         //this is where we are switching pages
     }
     

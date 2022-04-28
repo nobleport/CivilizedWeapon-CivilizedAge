@@ -31,9 +31,14 @@ export default class Lightsaber{
 
     igniteBlade(e){
         let blade = document.querySelector("#lightsaber-container > div:first-of-type");
-        if (blade.style.display === "block"){
-            blade.style.display = "none";
-        }else{
-        blade.style.display = "block";}
+            if (blade.style.display === "block"){
+                let soundEffect = new Audio("../images/8d82b5_Lightsaber_Powering_Down_Sound_Effect (1).mp3");
+                soundEffect.play();
+                blade.style.display = "none";
+            }else{
+                blade.style.display = "block";
+                let soundEffect = new Audio("../images/8d82b5_Lightsaber_Idle_Hum_Sound_Effect.mp3")
+                soundEffect.play();
+        }
     }
 }

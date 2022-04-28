@@ -435,10 +435,6 @@ color: olive;
   100%{box-shadow: 0 -20px 80px 40px rgba(20, 21, 24, 0.756);}
 }
 
-#lightsaber-container *:hover {
-  box-shadow: 0 40px 40px 40px rgba(20, 21, 24, 0.756);
-}
-
 #sleeve {
   width: 33px;
   position: absolute;
