@@ -48,7 +48,7 @@
     position: absolute;
     right: 0%;
     color: white;
-    background-image: url('../../images/computer-terminal-2.png');
+    background-image: url('../images/computer-terminal-2.png');
     color: #242424b2;
     border-radius: 10px;
     text-align: center;
@@ -219,7 +219,7 @@ color: olive;
 
 #options-container {
   position: absolute;
-  background-image: url("../images/computer-terminal-2.jpg");
+  background-image: url("../images/computer-terminal-2.png");
   height: 500px;
   width: 600px;
   top: 35%;
