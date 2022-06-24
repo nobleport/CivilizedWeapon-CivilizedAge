@@ -27,7 +27,7 @@ export default class Welcome {
             //this should link us to generating the workbench page//
             ul.appendChild(li4)
         li4.addEventListener("click", () => {
-            let soundEffect = new Audio("../images/lightspeed.mp3");
+            let soundEffect = new Audio("../images/Lightspeed.mp3");
             soundEffect.play()
             setTimeout(this.switchScreens.bind(this), 5500)
             
