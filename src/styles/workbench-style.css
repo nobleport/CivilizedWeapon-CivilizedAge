@@ -41,6 +41,23 @@
     transition: all 33ms ease-in-out;
     cursor: pointer;
   }
+
+  .instructions {
+    width: 18%;
+    font-size: 27px;
+    position: absolute;
+    right: 0%;
+    color: white;
+    background-image: '';
+  }
+  
+  .bench-holo {
+    position: absolute;
+    right: 16.5%;
+    bottom: 0%;
+    width: 20%;
+
+  }
   
   #workbench ul{
     font-size: 10;

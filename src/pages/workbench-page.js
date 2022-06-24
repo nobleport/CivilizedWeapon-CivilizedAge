@@ -22,6 +22,14 @@ export default class Workbench {
         backButton.innerHTML = "Back";
         backButton.addEventListener("click", this.toWelcomeScreen.bind(this))
         this.constructSidebar(workbenchPageFigure);
+        let holo = document.createElement('img')
+        holo.className = 'bench-holo'
+        holo.src = './images/workbench-holo.png';
+        workbenchPageFigure.appendChild(holo);
+        let instructions = document.createElement('p');
+        instructions.className = 'instructions';
+        instructions.innerHTML = 'Here is your workbench. Select all three lightsaber components from the sidebar, then click on the hilt to ignite your blade!';
+        workbenchPageFigure.appendChild(instructions);
     }
     
     toWelcomeScreen(){
