@@ -22,6 +22,10 @@
     transition: all 33ms ease-in-out;
     cursor: pointer;
   }
+
+  .launch-button {
+    box-shadow: #ee0808 3px 4px 5px 4px
+  }
   
   #workbench > button{
     margin-left: 10px;
