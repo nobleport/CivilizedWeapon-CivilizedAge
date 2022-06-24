@@ -48,7 +48,11 @@
     position: absolute;
     right: 0%;
     color: white;
-    background-image: '';
+    background-image: url('../../images/computer-terminal-2.png');
+    color: #242424b2;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 80%;
   }
   
   .bench-holo {
@@ -464,4 +468,5 @@ color: olive;
   left: 72.1%;
   width: 34px;
   bottom: 33.5%;
+  z-index: 2;
 }
