@@ -30,7 +30,6 @@ export default class Welcome {
             let soundEffect = new Audio("images/lightspeed.mp3");
             soundEffect.play()
             setTimeout(this.switchScreens.bind(this), 5500)
-            
         });
         this.welcomeContent(li1, li2, li3, li4);
     }
